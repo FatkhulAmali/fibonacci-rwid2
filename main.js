@@ -1,4 +1,4 @@
-const {parseNumber} = require("./js/helper.js");
+const _ = require("lodash");
 
 /**
  * Create an array filled by fibonacci sequence using loop way.
@@ -6,7 +6,7 @@ const {parseNumber} = require("./js/helper.js");
  * @param {number} sequence
  */
 function generateFibonacciUsingLoop(sequence) {
-  sequence = parseNumber(sequence);
+  sequence = _.toNumber(sequence);
 
   let result = [];
   let prev = 0;
@@ -37,7 +37,7 @@ function generateFibonacciUsingRecursive(sequence) {
     return n < 1 ? 0 : n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2);
   }
 
-  sequence = parseNumber(sequence);
+  sequence = _.toNumber(sequence);
 
   let result = [];
 
